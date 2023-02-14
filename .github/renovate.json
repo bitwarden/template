@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":combinePatchMinorReleases",
+    ":disableDependencyDashboard",
+    ":ignoreUnstable",
+    ":maintainLockFilesWeekly",
+    ":prConcurrentLimitNone",
+    ":preserveSemverRanges",
+    ":rebaseStalePrs",
+    "schedule:weekly",
+    ":separateMultipleMajorReleases"
+  ],
+  "enabledManagers": ["cargo", "github-actions", "npm", "nuget"],
+  "ignoreDeps": [
+    "bootstrap",
+    "electron-builder",
+    "electron",
+    "node-ipc",
+    "regedit",
+    "zone.js"
+  ]
+}
