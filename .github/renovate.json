@@ -13,14 +13,6 @@
     ":separateMultipleMajorReleases"
   ],
   "enabledManagers": ["cargo", "github-actions", "npm", "nuget"],
-  "ignoreDeps": [
-    "bootstrap",
-    "electron-builder",
-    "electron",
-    "node-ipc",
-    "regedit",
-    "zone.js"
-  ],
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
