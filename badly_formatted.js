@@ -2,7 +2,7 @@ class Utils {
    static isNode = false;
 }
 
-function test() {
+export function test() {
    return Utils.isNode;
 }
 
