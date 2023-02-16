@@ -2,6 +2,10 @@ class Utils {
    static isNode = false;
 }
 
+function test() {
+   return Utils.isNode;
+}
+
 export function fromB64ToArray(str) {
    if (str == null) {
       return null;
