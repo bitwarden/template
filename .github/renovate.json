@@ -15,8 +15,7 @@
   "enabledManagers": ["cargo", "github-actions", "npm", "nuget"],
   "packageRules": [
     {
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
+      "groupName": "{{manager}}",
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch"]
     }
