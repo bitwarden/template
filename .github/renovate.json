@@ -3,9 +3,10 @@
   "extends": [
     "config:base",
     ":combinePatchMinorReleases",
-    ":disableDependencyDashboard",
+    ":dependencyDashboard",
     ":ignoreUnstable",
     ":maintainLockFilesWeekly",
+    ":pinDigests",
     ":prConcurrentLimitNone",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
