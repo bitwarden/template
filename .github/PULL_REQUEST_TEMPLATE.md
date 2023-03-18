@@ -4,13 +4,13 @@
 
 ## 🚧 Type of change
 
-<!-- Choose one and remove the others. -->
+<!-- Choose those applicable and remove the others. -->
 
-🐛 Bug fix
-🚀 New feature development
-🧹 Tech debt (refactoring, code cleanup, dependency upgrades, etc.)
-🤖 Build/deploy pipeline (DevOps)
-🎂 Other
+-   🐛 Bug fix
+-   🚀 New feature development
+-   🧹 Tech debt (refactoring, code cleanup, dependency upgrades, etc.)
+-   🤖 Build/deploy pipeline (DevOps)
+-   🎂 Other
 
 ## 📔 Objective
 
