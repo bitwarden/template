@@ -29,10 +29,12 @@
 
 ## ✅ Checklist
 
+<!-- Some checks are optional -- select what you've done when it applies. -->
+
 -   [ ] Contributor guidelines followed
 -   [ ] Communicated to DevOps any deployment requirements
 -   [ ] Ran all formatters and local linters
--   [ ] Written new unit and / or integration tests
+-   [ ] Written new unit and / or integration tests where applicable
 -   [ ] Updated any necessary documentation or informed the documentation team
 -   [ ] Noted any required translations
 
