@@ -27,16 +27,15 @@
 
 <!-- Required for any UI changes; delete if not applicable. -->
 
-## ✅ Checklist
+## ⏰ Reminders before review
 
-<!-- Some checks are optional -- select what you've done when it applies. -->
-
--   [ ] Contributor guidelines followed
--   [ ] Communicated to DevOps any deployment requirements
--   [ ] Ran all formatters and local linters
--   [ ] Written new unit and / or integration tests where applicable
--   [ ] Updated any necessary documentation or informed the documentation team
--   [ ] Noted any required translations
+-   Contributor guidelines followed
+-   All formatters and local linters executed and passed
+-   Written new unit and / or integration tests where applicable
+-   Used internationalization (i18n) for all UI strings
+-   CI builds passed
+-   Communicated to DevOps any deployment requirements
+-   Updated any necessary documentation or informed the documentation team
 
 ## 🦮 Reviewer guidelines
 
