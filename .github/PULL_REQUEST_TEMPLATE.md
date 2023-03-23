@@ -39,6 +39,8 @@
 
 ## 🦮 Reviewer guidelines
 
+<!-- Suggested interactions but feel free to use (or not) as you desire! -->
+
 -   👍 (`:+1:`) or similar for great changes
 -   📝 (`:memo:`) or ℹ️ (`:information_source:`) for notes or general info
 -   ❓ (`:question:`) for questions
