@@ -45,6 +45,7 @@
 -   📝 (`:memo:`) or ℹ️ (`:information_source:`) for notes or general info
 -   ❓ (`:question:`) for questions
 -   🤔 (`:thinking:`) or 💭 (`:thought_balloon:`) for more open inquiry that's not quite a confirmed issue and could potentially benefit from discussion
--   ❌ (`:x:`) or ⚠️ (`:warning:`) for problems or concerns needing attention
+-   🎨 (`:art:`) for suggestions / improvements
+-   ❌ (`:x:`) or ⚠️ (`:warning:`) for more significant problems or concerns needing attention
 -   🌱 (`:seedling:`) or ♻️ (`:recycle:`) for future improvements or indications of technical debt
 -   ⛏ (`:pick:`) for minor or nitpick changes
