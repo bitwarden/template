@@ -33,7 +33,7 @@ jobs:
 
       - name: Lint
         id: ml
-        uses: oxsecurity/megalinter@c1612a7969ca083ca64ea4d55fe174ec7ea54740
+        uses: oxsecurity/megalinter@c364436149b0ef3578bd24fa38ed9aa23af884db
         env:
           VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
