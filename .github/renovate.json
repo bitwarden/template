@@ -6,7 +6,6 @@
     ":dependencyDashboard",
     ":ignoreUnstable",
     ":maintainLockFilesWeekly",
-    ":pinDigests",
     ":prConcurrentLimitNone",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
