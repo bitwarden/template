@@ -25,7 +25,7 @@
 
 ## 📸 Screenshots
 
-<!-- Required for any UI changes; delete if not applicable. -->
+<!-- Required for any UI changes; delete if not applicable. Use fixed width images for better display. -->
 
 ## ⏰ Reminders before review
 
