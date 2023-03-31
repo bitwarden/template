@@ -4,7 +4,6 @@
     "config:base",
     ":combinePatchMinorReleases",
     ":dependencyDashboard",
-    ":ignoreUnstable",
     ":maintainLockFilesWeekly",
     ":prConcurrentLimitNone",
     ":preserveSemverRanges",
