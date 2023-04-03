@@ -5,7 +5,7 @@
     ":combinePatchMinorReleases",
     ":dependencyDashboard",
     ":maintainLockFilesWeekly",
-    ":prConcurrentLimitNone",
+    ":prConcurrentLimit10",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
     "schedule:weekly",
@@ -18,5 +18,6 @@
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch"]
     }
-  ]
+  ],
+  "schedule": ["every weekend"]
 }
