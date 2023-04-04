@@ -9,7 +9,7 @@
     ":preserveSemverRanges",
     ":rebaseStalePrs",
     "schedule:weekends",
-    ":separateMultipleMajorReleases"
+    ":separateMajorReleases"
   ],
   "enabledManagers": ["cargo", "github-actions", "npm", "nuget"],
   "packageRules": [
