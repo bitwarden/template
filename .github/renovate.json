@@ -8,7 +8,7 @@
     ":prConcurrentLimit10",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
-    "schedule:weekly",
+    "schedule:weekends",
     ":separateMultipleMajorReleases"
   ],
   "enabledManagers": ["cargo", "github-actions", "npm", "nuget"],
@@ -18,6 +18,5 @@
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["minor", "patch"]
     }
-  ],
-  "schedule": ["every weekend"]
+  ]
 }
