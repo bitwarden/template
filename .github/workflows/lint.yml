@@ -71,3 +71,5 @@ jobs:
         with:
           branch: ${{ github.event.pull_request.head.ref || github.head_ref || github.ref }}
           commit_message: "Apply lint fixes"
+          commit_user_name: bitwarden-devops-bot
+          commit_user_email: 106330231+bitwarden-devops-bot@users.noreply.github.com
