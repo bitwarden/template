@@ -1,5 +1,6 @@
-﻿# Please sort lines alphabetically, this will ensure we don't accidentally add duplicates.
-
+# Please sort lines alphabetically, this will ensure we don't accidentally add duplicates.
 #
-
 # https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Remove this default
+* @bitwarden/dept-architecture
