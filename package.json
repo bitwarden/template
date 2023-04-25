@@ -7,7 +7,7 @@
     "url": "git+https://github.com/bitwarden/template.git"
   },
   "author": "Bitwarden Inc. <hello@bitwarden.com> (https://bitwarden.com)",
-  "license": "GPL-3.0",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "bugs": {
     "url": "https://github.com/bitwarden/template/issues"
   },
