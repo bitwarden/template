@@ -15,10 +15,11 @@
   "devDependencies": {
     "husky": "8.0.3",
     "lint-staged": "14.0.0",
+    "mega-linter-runner": "6.22.2",
     "prettier": "3.0.2"
   },
   "lint-staged": {
-    "*": "prettier --cache --write --ignore-unknown"
+    "*": "npx mega-linter-runner --containername 'megalinter-incremental' --remove-container --fix --filesonly"
   },
   "scripts": {
     "prepare": "husky install"
