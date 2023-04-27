@@ -5,6 +5,7 @@
     ":combinePatchMinorReleases",
     ":dependencyDashboard",
     ":maintainLockFilesWeekly",
+    ":pinVersions",
     ":prConcurrentLimit10",
     ":preserveSemverRanges",
     ":rebaseStalePrs",
