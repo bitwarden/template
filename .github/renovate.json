@@ -32,6 +32,6 @@
       "groupName": "nuget minor",
       "matchManagers": ["nuget"],
       "matchUpdateTypes": ["minor", "patch"]
-    },
+    }
   ]
 }
