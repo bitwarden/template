@@ -32,6 +32,12 @@
       "groupName": "nuget minor",
       "matchManagers": ["nuget"],
       "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "bitwarden gh-actions",
+      "matchManagers": ["github-actions"],
+      "matchPackagePrefixes": ["bitwarden/gh-actions"],
+      "automerge": true
     }
   ]
 }
