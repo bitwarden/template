@@ -7,10 +7,10 @@ on:
     types: [labeled, unlabeled, opened, edited, synchronize]
 jobs:
   enforce-label:
-    name: Enforce Label
+    name: Enforce label
     runs-on: ubuntu-22.04
     steps:
-      - name: Enforce Label
+      - name: Enforce label
         uses: yogevbd/enforce-label-action@a3c219da6b8fa73f6ba62b68ff09c469b3a1c024 # 2.2.2
         with:
           BANNED_LABELS: "hold,needs-qa"
