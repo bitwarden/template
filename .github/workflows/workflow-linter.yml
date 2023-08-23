@@ -9,3 +9,7 @@ on:
 jobs:
   call-workflow:
     uses: bitwarden/gh-actions/.github/workflows/workflow-linter.yml@a30e9c3d658dc97c4c2e61ec749fdab64b83386c
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write

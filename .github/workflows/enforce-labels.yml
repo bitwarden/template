@@ -9,6 +9,11 @@ jobs:
   enforce-label:
     name: Enforce label
     runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+
     steps:
       - name: Enforce label
         uses: yogevbd/enforce-label-action@a3c219da6b8fa73f6ba62b68ff09c469b3a1c024 # 2.2.2
