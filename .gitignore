@@ -19,9 +19,5 @@ Thumbs.db
 !.vscode/extensions.json
 .history/*
 
-# Node
-node_modules
-npm-debug.log
-
 # Lint
 megalinter-reports/
