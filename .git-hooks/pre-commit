@@ -3,8 +3,9 @@
 FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
 [ -z "$FILES" ] && exit 0
 
-npx mega-linter-runner --remove-container --fix --filesonly $FILES
+if npx mega-linter-runner --remove-container --fix --filesonly $FILES; then
+    echo "$FILES" | xargs git add
+    exit 0
+fi
 
-echo "$FILES" | xargs git add
-
-exit 0
+exit 1
