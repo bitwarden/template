@@ -10,7 +10,7 @@ permissions: read-all
 
 jobs:
   call-workflow:
-    uses: bitwarden/gh-actions/.github/workflows/workflow-linter.yml@67ab95d7a466bcefdedf3f93cbc10bcff436edfe
+    uses: bitwarden/gh-actions/.github/workflows/workflow-linter.yml@ba6a77541fa0732735408d10f3ca1e122221201d
     permissions:
       contents: read
       checks: write
