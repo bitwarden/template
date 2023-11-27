@@ -8,8 +8,9 @@
     ":pinAllExceptPeerDependencies",
     ":prConcurrentLimit10",
     ":rebaseStalePrs",
-    "schedule:weekends",
-    ":separateMajorReleases"
+    ":separateMajorReleases",
+    "group:monorepos",
+    "schedule:weekends"
   ],
   "enabledManagers": ["cargo", "github-actions", "npm", "nuget"],
   "packageRules": [
