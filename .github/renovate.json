@@ -13,6 +13,8 @@
     "schedule:weekends"
   ],
   "enabledManagers": ["cargo", "github-actions", "npm", "nuget"],
+  "commitMessagePrefix": "[deps]:",
+  "commitMessageTopic": "{{depName}}",
   "packageRules": [
     {
       "groupName": "cargo minor",
