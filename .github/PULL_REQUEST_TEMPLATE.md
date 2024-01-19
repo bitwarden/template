@@ -36,7 +36,7 @@
 - Used internationalization (i18n) for all UI strings
 - CI builds passed
 - Communicated to DevOps any deployment requirements
-- Updated any necessary documentation (Confluence, https://contributing.bitwarden.com) or informed the documentation team
+- Updated any necessary documentation (Confluence, contributing docs) or informed the documentation team
 
 ## 🦮 Reviewer guidelines
 
