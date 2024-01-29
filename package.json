@@ -13,7 +13,7 @@
   },
   "homepage": "https://bitwarden.com",
   "devDependencies": {
-    "husky": "8.0.3",
+    "husky": "9.0.7",
     "lint-staged": "15.2.0",
     "prettier": "3.2.4"
   },
@@ -21,6 +21,6 @@
     "*": "prettier --cache --write --ignore-unknown"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky"
   }
 }
