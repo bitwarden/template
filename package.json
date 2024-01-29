@@ -21,6 +21,6 @@
     "*": "prettier --cache --write --ignore-unknown"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky"
   }
 }
