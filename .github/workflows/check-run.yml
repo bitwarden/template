@@ -1,0 +1,20 @@
+name: Check PR run
+
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+  workflow_call:
+
+permissions: read-all
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Check access
+        if: ${{ github.event.pull_request.author_association != 'COLLABORATOR' && github.event.pull_request.author_association != 'OWNER' }}
+        run: |
+          echo "Event not triggered by a collaborator."
+          exit 1

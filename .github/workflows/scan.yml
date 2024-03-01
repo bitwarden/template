@@ -12,9 +12,15 @@ on:
 permissions: read-all
 
 jobs:
+  check-run:
+    name: Check PR run
+    if: github.event_name == 'pull_request'
+    uses: ./.github/workflows/check-run.yml
+
   sast:
     name: SAST scan
     runs-on: ubuntu-22.04
+    needs: check-run
     permissions:
       security-events: write
 
@@ -42,6 +48,7 @@ jobs:
   quality:
     name: Quality scan
     runs-on: ubuntu-22.04
+    needs: check-run
 
     steps:
       - name: Check out repo
