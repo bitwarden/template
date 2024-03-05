@@ -15,7 +15,7 @@ permissions: read-all
 jobs:
   check-run:
     name: Check PR run
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request_target'
     uses: ./.github/workflows/check-run.yml
 
   sast:
