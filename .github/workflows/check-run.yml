@@ -1,8 +1,6 @@
 name: Check PR run
 
 on:
-  pull_request_target:
-    types: [opened, synchronize]
   workflow_call:
 
 permissions: read-all
