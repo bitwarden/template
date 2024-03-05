@@ -8,7 +8,6 @@ on:
       - "rc"
       - "hotfix-rc"
   pull_request_target:
-    types: [opened, synchronize]
 
 permissions: read-all
 
