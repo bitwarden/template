@@ -15,7 +15,7 @@ permissions: read-all
 jobs:
   check-run:
     name: Check PR run
-    uses: ./.github/workflows/check-run.yml
+    uses: bitwarden/gh-actions/.github/workflows/check-run.yml@main
 
   sast:
     name: SAST scan
