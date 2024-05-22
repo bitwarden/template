@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Enforce labels
-        uses: bitwarden/gh-actions/enforce-labels@main
+        uses: bitwarden/gh-actions/.github/workflows/_enforce-labels.yml@main
