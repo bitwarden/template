@@ -2,18 +2,12 @@
 name: Check PR labels
 
 on:
-  workflow_call:
   pull_request:
     types: [labeled, unlabeled, opened, reopened, synchronize]
 jobs:
-  enforce-version-label:
-    if: ${{ contains(github.event.*.labels.*.name, 'version') }}
-    name: Enforce version label
-    runs-on: ubuntu-22.04
-
+  enforce-labels:
+    name: Enforce labels
+    runs-on: ubuntu-latest
     steps:
-      - name: Check for label
-        run: |
-          echo "PR without the version label cannot be merged."
-          echo "### :x: PR without the version label cannot be merged" >> $GITHUB_STEP_SUMMARY
-          exit 1
+      - name: Enforce labels
+        uses: bitwarden/gh-actions/enforce-labels@main
