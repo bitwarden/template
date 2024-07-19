@@ -1,0 +1,13 @@
+# Custom dictionary for spellchecking. Before adding a word here, consider whether you can put
+# it in a single (`) or multiline (```) code snippet instead, as they are automatically ignored
+# by the spellchecker. Please keep the list sorted alphabetically.
+
+ACMR
+Bitwarden
+classpath
+filesonly
+fullname
+keyserver
+stefanzweifel
+venv
+yogevbd
