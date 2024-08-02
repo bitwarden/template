@@ -9,3 +9,6 @@
 
 # DevOps for Actions and other workflow changes
 .github/workflows @bitwarden/dept-devops
+
+# AppSec for Security related Actions
+.github/workflows/scan.y*ml @bitwarden/team-appsec
