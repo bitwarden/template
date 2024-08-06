@@ -1,9 +1,13 @@
 {
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
-  "language": "en",
-  // words - list of words to be always considered correct
-  "words": [],
-  // flagWords - list of words to be always considered incorrect
-  // This is useful for offensive words and common spelling errors.
-  "flagWords": []
+  "words": ["Bitwarden"],
+  "ignorePaths": [
+    ".vscode",
+    "**/.cspell.json",
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/package-lock.json",
+    "/project-words.txt"
+  ]
 }
