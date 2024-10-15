@@ -10,6 +10,7 @@ on:
   pull_request_target:
     types: [opened, synchronize]
 
+# TODO: see https://bitwarden.atlassian.net/l/cp/SLtTZJ90 for configuration tips
 jobs:
   check-run:
     name: Check PR run
@@ -26,12 +27,12 @@ jobs:
 
     steps:
       - name: Check out repo
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938 # v4.2.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Scan with Checkmarx
-        uses: checkmarx/ast-github-action@831a8d51a8a0535c0399f9c12728d8d3cc22d850 # 2.0.28
+        uses: checkmarx/ast-github-action@ed196cdaec9cd1bc5aacac4ca2010dd773b20893 # 2.0.35
         env:
           INCREMENTAL: "${{ contains(github.event_name, 'pull_request') && '--sast-incremental' || '' }}"
         with:
@@ -46,7 +47,7 @@ jobs:
             --output-path . ${{ env.INCREMENTAL }}
 
       - name: Upload Checkmarx results to GitHub
-        uses: github/codeql-action/upload-sarif@9fdb3e49720b44c48891d036bb502feb25684276 # v3.25.6
+        uses: github/codeql-action/upload-sarif@e2b3eafc8d227b0241d48be5f425d47c2d750a13 # v3.26.10
         with:
           sarif_file: cx_result.sarif
 
@@ -60,19 +61,17 @@ jobs:
 
     steps:
       - name: Check out repo
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938 # v4.2.0
         with:
           fetch-depth: 0
           ref: ${{  github.event.pull_request.head.sha }}
 
       - name: Scan with SonarCloud
-        uses: sonarsource/sonarcloud-github-action@4006f663ecaf1f8093e8e4abb9227f6041f52216 # v2.2.0
+        uses: sonarsource/sonarcloud-github-action@eb211723266fe8e83102bac7361f0a05c3ac1d1b # v3.0.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # TODO: see https://docs.sonarsource.com/sonarcloud/advanced-setup/analysis-parameters/
-          # for parameters to configure
           args: >
             -Dsonar.organization=${{ github.repository_owner }}
             -Dsonar.projectKey=${{ github.repository_owner }}_${{ github.event.repository.name }}
