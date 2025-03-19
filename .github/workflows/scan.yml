@@ -51,7 +51,7 @@ jobs:
         with:
           sarif_file: cx_result.sarif
           sha: ${{ contains(github.event_name, 'pull_request') && github.event.pull_request.head.sha || github.sha }}
-          ref: ${{ contains(github.event_name, 'pull_request') && format('refs/pull/{0}/merge', github.event.pull_request.number) || github.ref }}
+          ref: ${{ contains(github.event_name, 'pull_request') && format('refs/pull/{0}/head', github.event.pull_request.number) || github.ref }}
 
   quality:
     name: Quality scan
