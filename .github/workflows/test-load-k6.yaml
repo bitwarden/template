@@ -44,7 +44,7 @@ jobs:
         -o experimental-opentelemetry
       
       # Paths to your k6 load tests
-      K6_LOADTESTS_PATHS: >-
+      K6_LOAD_TESTS_PATHS: >-
         perf/load/*.js
     steps:
       - name: Check out repo
@@ -60,5 +60,5 @@ jobs:
         id: k6-test
         continue-on-error: true
         with:
-          path: ${{ env.K6_LOADTESTS_PATHS }}
+          path: ${{ env.K6_LOAD_TESTS_PATHS }}
           flags: ${{ env.K6_FLAGS }}
