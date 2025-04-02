@@ -9,6 +9,7 @@ on:
 
 jobs:
   run-tests:
+    name: Run k6 tests
     runs-on: ubuntu-24.04
     services:
       # Datadog agent for collecting OTEL metrics from k6
@@ -35,16 +36,16 @@ jobs:
           --pid host
     env:
       # K6 and Datadog system configuration
-      DOCKER_CONTENT_TRUST: 1
-      K6_OTEL_EXPORTER_TYPE: http
-      K6_OTEL_HTTP_EXPORTER_INSECURE: true
-      K6_OTEL_METRIC_PREFIX: k6_
-      K6_FLAGS: >-
+      _DOCKER_CONTENT_TRUST: 1
+      _K6_OTEL_EXPORTER_TYPE: http
+      _K6_OTEL_HTTP_EXPORTER_INSECURE: true
+      _K6_OTEL_METRIC_PREFIX: k6_
+      _K6_FLAGS: >-
         --tag test-id=${{ github.ref_name }}
         -o experimental-opentelemetry
       
       # Paths to your k6 load tests
-      K6_LOAD_TESTS_PATHS: >-
+      _K6_LOAD_TESTS_PATHS: >-
         perf/load/*.js
     steps:
       - name: Check out repo
@@ -59,5 +60,5 @@ jobs:
         uses: grafana/run-k6-action@c6b79182b9b666aa4f630f4a6be9158ead62536e # v1.2.0
         continue-on-error: true
         with:
-          path: ${{ env.K6_LOAD_TESTS_PATHS }}
-          flags: ${{ env.K6_FLAGS }}
+          path: ${{ env._K6_LOAD_TESTS_PATHS }}
+          flags: ${{ env._K6_FLAGS }}
