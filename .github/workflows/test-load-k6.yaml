@@ -16,13 +16,13 @@ jobs:
       datadog:
         image: datadog/agent:7-full
         ports:
-          - 4318:4318
+          - 4317:4317
           - 5555:5555
         env:
           DD_SITE: us3.datadoghq.com
           DD_API_KEY: ${{ secrets.DD_API_KEY }}
           DD_DOGSTATSD_NON_LOCAL_TRAFFIC: 1
-          DD_OTLP_CONFIG_RECEIVER_PROTOCOLS_HTTP_ENDPOINT: 0.0.0.0:4318
+          DD_OTLP_CONFIG_RECEIVER_PROTOCOLS_GRPC_ENDPOINT: 0.0.0.0:4317
           DD_HEALTH_PORT: 5555
           HOST_PROC: /proc
         options: >-
@@ -37,8 +37,7 @@ jobs:
     env:
       # K6 and Datadog system configuration
       _DOCKER_CONTENT_TRUST: 1
-      _K6_OTEL_EXPORTER_TYPE: http
-      _K6_OTEL_HTTP_EXPORTER_INSECURE: true
+      _K6_OTEL_GRPC_EXPORTER_INSECURE: true
       _K6_OTEL_METRIC_PREFIX: k6_
       _K6_FLAGS: >-
         --tag test-id=${{ github.ref_name }}
