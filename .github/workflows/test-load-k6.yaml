@@ -1,4 +1,4 @@
-name: k6 Load Test
+name: Load Test
 
 on:
   push:
