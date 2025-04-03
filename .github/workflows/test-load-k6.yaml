@@ -14,7 +14,7 @@ jobs:
     services:
       # Datadog agent for collecting OTEL metrics from k6
       datadog:
-        image: datadog/agent:7-full
+        image: datadog/agent:7-full@sha256:a81b9f2e5ad5b8d11a560d8716fcc1139c105a72d5157260f7034cea7a5103eb
         ports:
           - 4317:4317
           - 5555:5555
