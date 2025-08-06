@@ -18,6 +18,7 @@ on:
 
 permissions: {}
 
+# TODO: see https://bitwarden.atlassian.net/l/cp/SLtTZJ90 for configuration tips
 jobs:
   check-run:
     name: Check PR run
