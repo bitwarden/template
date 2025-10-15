@@ -1,11 +1,21 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>bitwarden/renovate-config"],
-  "enabledManagers": ["cargo", "github-actions", "npm", "nuget"],
+  "enabledManagers": ["cargo", "docker-compose", "dockerfile", "github-actions", "npm", "nuget"],
   "packageRules": [
     {
       "groupName": "cargo minor",
       "matchManagers": ["cargo"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "docker-compose minor",
+      "matchManagers": ["docker-compose"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "dockerfile minor",
+      "matchManagers": ["dockerfile"],
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
