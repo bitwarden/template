@@ -1,1 +1,0 @@
-# Bitwarden - Claude Code Configuration
