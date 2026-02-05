@@ -1,6 +1,6 @@
 {
   "extraKnownMarketplaces": {
-    "bitwarden-ai-plugins": {
+    "bitwarden-marketplace": {
       "source": {
         "source": "github",
         "repo": "bitwarden/ai-plugins"
