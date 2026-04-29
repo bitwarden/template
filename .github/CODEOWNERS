@@ -7,6 +7,9 @@
 # Default file owners
 * @bitwarden/dept-architecture
 
+# CODEOWNERS owners
+.github/CODEOWNERS @bitwarden/tech-leads
+
 # Claude related files
 .claude/ @bitwarden/team-ai-sme
 .github/workflows/respond.yml @bitwarden/team-ai-sme
