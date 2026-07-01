@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+#
+# Pre-commit linter: formats and spell-checks staged files.
+#   - Prettier (--check) on staged Markdown, JSON, JSON5, and YAML
+#   - CSpell on staged Markdown
+#
+# Wired up through .gitconfig ([hook "linter"]). Enable it once per clone by
+# running the following from the repo root:
+#
+#   git config set --local include.path "../.gitconfig"
+#
+# Requires Node.js (>=18); the tools are fetched on demand via `npx --yes`.
+
+set -eu
+
+staged_files=$(git diff --cached --name-only --diff-filter=ACMR -- '*.md' '*.json' '*.json5' '*.yml' '*.yaml')
+
+if [ -n "$staged_files" ]; then
+  # Word-splitting is intentional: pass each newline-separated path as an argument.
+  # shellcheck disable=SC2086
+  npx --yes prettier@3.9.1 --check $staged_files
+fi
+
+staged_md=$(git diff --cached --name-only --diff-filter=ACMR -- '*.md')
+
+if [ -n "$staged_md" ]; then
+  # shellcheck disable=SC2086
+  npx --yes cspell@10.0.1 --no-progress --gitignore $staged_md
+fi

@@ -1,8 +1,35 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>bitwarden/renovate-config"],
-  "enabledManagers": ["cargo", "docker-compose", "dockerfile", "github-actions", "npm", "nuget"],
+  "enabledManagers": [
+    "cargo",
+    "custom.regex",
+    "docker-compose",
+    "dockerfile",
+    "github-actions",
+    "npm",
+    "nuget"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Pinned npx tool versions in the lint workflow and git hooks",
+      "fileMatch": [
+        "^\\.github/workflows/lint\\.yml$",
+        "^\\.githooks/pre-commit$"
+      ],
+      "matchStrings": [
+        "(?<depName>prettier|cspell)@(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "npm"
+    }
+  ],
   "packageRules": [
+    {
+      "groupName": "lint tooling",
+      "matchManagers": ["custom.regex"],
+      "matchPackageNames": ["prettier", "cspell"]
+    },
     {
       "groupName": "cargo minor",
       "matchManagers": ["cargo"],
