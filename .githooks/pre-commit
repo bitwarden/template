@@ -18,7 +18,7 @@ staged_files=$(git diff --cached --name-only --diff-filter=ACMR -- '*.md' '*.jso
 if [ -n "$staged_files" ]; then
   # Word-splitting is intentional: pass each newline-separated path as an argument.
   # shellcheck disable=SC2086
-  npx --yes prettier@3.9.1 --check $staged_files
+  npx --yes prettier@3.9.6 --check $staged_files
 fi
 
 staged_md=$(git diff --cached --name-only --diff-filter=ACMR -- '*.md')

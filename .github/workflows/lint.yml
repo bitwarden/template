@@ -30,7 +30,7 @@ jobs:
           node-version: 24
 
       - name: Check formatting
-        run: npx --yes prettier@3.9.1 --check "**/*.{md,json,json5,yml,yaml}"
+        run: npx --yes prettier@3.9.6 --check "**/*.{md,json,json5,yml,yaml}"
 
   spell:
     name: CSpell
