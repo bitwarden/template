@@ -25,5 +25,5 @@ staged_md=$(git diff --cached --name-only --diff-filter=ACMR -- '*.md')
 
 if [ -n "$staged_md" ]; then
   # shellcheck disable=SC2086
-  npx --yes cspell@10.0.1 --no-progress --gitignore $staged_md
+  npx --yes cspell@10.3.0 --no-progress --gitignore $staged_md
 fi
