@@ -47,4 +47,4 @@ jobs:
           node-version: 24
 
       - name: Check spelling
-        run: npx --yes cspell@10.0.1 --no-progress --gitignore "**/*.md"
+        run: npx --yes cspell@10.3.0 --no-progress --gitignore "**/*.md"
