@@ -14,9 +14,9 @@
     {
       "customType": "regex",
       "description": "Pinned npx tool versions in the lint workflow and git hooks",
-      "fileMatch": [
-        "^\\.github/workflows/lint\\.yml$",
-        "^\\.githooks/pre-commit$"
+      "managerFilePatterns": [
+        "/^\\.github/workflows/lint\\.yml$/",
+        "/^\\.githooks/pre-commit$/"
       ],
       "matchStrings": [
         "(?<depName>prettier|cspell)@(?<currentValue>\\d+\\.\\d+\\.\\d+)"
