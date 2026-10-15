@@ -6,9 +6,6 @@ Template guidance — delete this comment when customizing your new repo.
 Run /bitwarden-init:init to generate this file from an analysis of your
 codebase. It fills the sections below and requires these exact headings:
 https://github.com/bitwarden/ai-plugins/tree/main/plugins/bitwarden-init
-
-Authoring guidance for everything else under .claude/ lives in
-.claude/CONTRIBUTING.md.
 -->
 
 Brief description of the project and its primary purpose.
