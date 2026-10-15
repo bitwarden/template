@@ -30,7 +30,7 @@ jobs:
           node-version: 24
 
       - name: Check formatting
-        run: npx --yes prettier@3.9.6 --check "**/*.{md,json,json5,yml,yaml}"
+        run: npx --yes prettier@3.9.9 --check "**/*.{md,json,json5,yml,yaml}"
 
   spell:
     name: CSpell
@@ -47,4 +47,4 @@ jobs:
           node-version: 24
 
       - name: Check spelling
-        run: npx --yes cspell@10.0.1 --no-progress --gitignore "**/*.md"
+        run: npx --yes cspell@10.3.6 --no-progress --gitignore "**/*.md"
